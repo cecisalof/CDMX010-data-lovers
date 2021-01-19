@@ -1,0 +1,71 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"problemMatcher": [],
+			"label": "npm: install",
+			"detail": "install dependencies from package",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "serve src/"
+		},
+		{
+			"type": "npm",
+			"script": "test",
+			"group": "test",
+			"problemMatcher": [],
+			"label": "npm: test",
+			"detail": "jest --verbose --coverage"
+		},
+		{
+			"type": "npm",
+			"script": "deploy",
+			"problemMatcher": [],
+			"label": "npm: deploy",
+			"detail": "gh-pages -d src",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "eslint",
+			"problemMatcher": [],
+			"label": "npm: eslint",
+			"detail": "eslint --ext .js src/ test/",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "open-coverage-report",
+			"problemMatcher": [],
+			"label": "npm: open-coverage-report",
+			"detail": "opener ./coverage/lcov-report/index.html",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "htmlhint",
+			"problemMatcher": [],
+			"label": "npm: htmlhint",
+			"detail": "htmlhint src/*.html test/*.html",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "pretest",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: pretest",
+			"detail": "npm run eslint && npm run htmlhint"
+		}
+	]
+}
