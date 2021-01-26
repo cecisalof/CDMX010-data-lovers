@@ -10,28 +10,44 @@
  <body>
    <div id="root"></div>
    <header>
+    <nav id="myLinks">
      <div class="topnav" id="myTopnav">
-       <a href="#home" class="active"><img src="resources/logo.png" alt="logo"></a>
-       <nav id="myLinks">
-         <ul>
-         <li> <a href="#sports"></a>DEPORTES</li>
-         <li> <a href="#athletes"></a>ATLETAS</li>
-         <li> <a href="#press"></a>PRENSA</li>
-        </ul>
+      <ul>
+        <li id="nav"> <a href="#athletes">Athletes</a></li>
+        <li id="nav2"> <a href="#medals">Results</a></li>
+        <li id="nav3"> <a href="#press">Press</a></li>
+       
+       </ul>
+       <a href="#home" class="active"><img id="logo" src="resources/logosinfondo.png" alt="logo"></a>
+       <div>
+         <img id="filter_menu" src="resources/header/search icon.png" alt="search">
+       </div>       
+     </div>  
        <!-- <a href="javascript:void(0);" class="icon" onclick="mobileMenu()"> --><!--void: crea un clink que no enlaza a ningún lugar si no que ejecuta la función de javascript-->
-       </nav>
-     </div>
+        </nav>
    </header>
-   <nav></nav> <!--Aquí ponemos los filtros-->
    <main>
-     <div id="container-cards">
+     <div id="container-cards" class="wrapper">
        <ul id="sportsCards"></ul>
      </div>
      <div id="eventList"></div>
    </main>
    <div #athletestoken></div>
    <aside></aside>
-   <footer></footer>
+   <footer>
+     <div id="footer">
+      <ul id="navigation_map">
+        <p class="footer_tittle">Navigation Map</p>
+        <li id="athletes"> <a href="#athletes">Athletes</a></li>
+        <li id="medals"> <a href="#medals">Results</a></li>
+        <li id="press"> <a href="#press">Press</a></li>
+       </ul>
+       <img class="footer_img" src="resources/logosinfondo.png" alt="logo">
+       <p class="contact">support@rio2016.com</p>
+       <a href="#facebook"><img id="facebook" src="resources/footer/facebook-letter-logo.png" alt=""></a>
+       <a href="#instagram"><img id="instagram" src="resources/footer/instagram.png" alt=""></a>
+     </div>
+   </footer>
    <script src="main.js" type="module"></script>
  </body>
 </html>

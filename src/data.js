@@ -1,5 +1,12 @@
-import athletes from './data/athletes.js';
-import data from './data/athletes.js'
+//El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
+//Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener, 
+//procesar y manipular datos (tus funciones).
+
+import data from './data/athletes.js';
+
+//let arrayAthletes = data.athletes;
+
+
 /*
 for(const key in data.athletes){
   // console.log('athletes name', data.athletes[key].name);
@@ -9,46 +16,35 @@ for(const key in data.athletes){
 export default data  
 
  */
-export function filterBySport(sport){
-   const filteredData = data.athletes.filter(function(athlete){
-       return athlete.sport === sport
-   })
-   
-    return filteredData
-}
- 
-export function filterByEvent(athletes){
- //const filteredData2 = data.athletes.filter(function(athlete){
-   //  return athlete.event === event
-  console.log(athletes); 
-  let eventResult = [];
-  for (const i in athletes.athletes){
-  eventResult.push(athletes.athletes[i].event)
-  } 
- console.log(eventResult);
- const eventArr = new Set(eventResult);
- let eventList = [...eventArr];
- console.log(eventList);
- return eventList;
-}
-filterByEvent(athletes);
 
-//const sport = filterBySport("Swimming")
-//const event = filterByEvent( "Swimming Men's 100 metres Freestyle")
- 
-//console.log("calling filterBySport for Swimming", filterBySport("Swimming"))
-//console.log("calling filterByEvent for  Swimming Men's 100 metres Freestyle", filterByEvent("Swimming Men's 100 metres Freestyle"))
- 
+//Esta función filtra del set los objetos "athlete" por su propiedad {sport}
+ export function filterBySport(sport){
+    let filteredData1 = data.athletes.filter(function(athlete){
+      return athlete.sport === sport
+      });
+      
+      return filteredData1
+    }
+//console.log("Filtering by Sport for Volleyball", filterBySport("Volleyball"));
 
- 
-export function sports(athletes) {
- let sports = [];
- for (const i in athletes){
-   sports.push(athletes[i].sport)
- }
- const dataArr = new Set(sports);
- let sportsCards = [...dataArr];
- console.log(sportsCards);
- return sportsCards;
+
+
+   function allSportsOnce(athletes){ //athletes como parámetros
+    let sports = []; // Un array vacío en el que se añadirán los elementos que resulten del método push.
+    for(const i in data.athletes){ // un loop sobre todo el array de objetos "athletes" en "data" 
+      sports.push(data.athletes[i].sport) // por el nombre del array, se aplica el método .push y dentro del paréntesis van los elementos que se
+                                          //añadirán al array. En este caso el lenght del array "sports" es 0, por lo que se crea 
+                                            // con el loop que itera sobre data.athletes.sport y añade los elemntos a "sports"
+   }
+   //console.log(sports);//Hasta aquí imprime 2023 objetos "athletes"
+    const dataArrSports = new Set(sports); // Se crea una variable para asiganr un nuevo set de datos únicos
+   let sportsList = [...dataArrSports]; // spread operator aplicado al nuevo array "dataArrSports" 
+   console.log(sportsList); // Ahora imprime sólo 34 elementos que responden a la propiedad {sport} en los objetos "athletes" de "data"
+   return sportsList;
 }
+  allSportsOnce(data); //Si no pasamos "data" como argumento de la función, ésta no correrá
 
+
+
+  
+  

@@ -1,18 +1,19 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterBySport, data } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterBySport', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterBySport().toBe('function'));
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `filterBySport`', () => {
+    expect(filterBySport()).toBe('true');
   });
 });
 
 
-describe('anotherExample', () => {
+/*describe('anotherExample', () => {
+
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
@@ -20,4 +21,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/
