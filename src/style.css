@@ -30,7 +30,17 @@ header {
 }
 
 
-/*
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+}
+
+
+.topnav #myLinks {
+  display: none;
+}
+
 .hamburger_menu{
   position: absolute;
   left: 8%;
@@ -39,7 +49,7 @@ header {
   bottom: 26.98%;
 
 }
-*/
+
 
 #filter_menu{
   position: absolute;
@@ -48,7 +58,7 @@ header {
   top: 31.75%;
   bottom: 31.46%;
 
-  background: url(search icon.png);
+
   height: 23.181819915771484px;
   width: 25px;
   left: 320px;
@@ -73,7 +83,7 @@ header {
     /*top: 542px;*/
   }
 
-  #footer{
+#footer{
     position: fixed;
     width: 375px;
     height: 100px;
@@ -85,6 +95,14 @@ header {
   body > footer:nth-child(6) {
     bottom: 0px;
    }
+
+   body > main:nth-child(3) > h4:nth-child(1) {
+    margin-top: 100px;
+    padding-left: 10px;
+    font-size: 14px;
+   }
+   
+   
 
    p{
      font-family: Merriweather, Arial, Helvetica, sans-serif;
@@ -131,7 +149,7 @@ header {
    }
 
 
-   .footer_img{
+.footer_img{
       height: 43.38461685180664px;
       width: px;
       left: 168px;
@@ -151,16 +169,12 @@ header {
    }
 
 
-   .contact{
-    height: 17px;
-    width: 112px;
-    left: 263px;
-    top: 45px;
-    border-radius: nullpx;
+.contact{
+   
     position: absolute;
     left: 70.13%;
     right: 0%;
-    top: 30%;
+    top: 35%;
     bottom: 58.67%;
     
     font-family: Fira Sans;
@@ -175,39 +189,39 @@ header {
     
    }
 
-  #facebook{
+#facebook{
     border-radius: 0px;
     position: absolute;
     width: 15px;
     height: 16.99px;
     left: 283px;
-    top: 67px;
+    top: 59px;
 
     background: url(facebook-letter-logo.png);
   } 
 
-  #instagram{
+#instagram{
     border-radius: 0px;
     position: absolute;
     width: 15px;
     height: 15.38px;
     left: 305px;
-    top: 68px;
+    top: 60px;
 
     background: url(instagram.png);
 
   }
   
-  .footer_tittle{
+.footer_tittle{
     position: absolute;
     left: 6.67%;
     right: 76.27%;
-    top: 25%;
+    top: 15%;
     bottom: 58%;
     font-family: Fira Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 9px;
     line-height: 11px;
     width: 100%;
 
@@ -218,11 +232,11 @@ header {
     color: #000000;
   }
 
-  #athletes{
+#athletes{
     position: absolute;
     left: 6.67%;
     right: 84.27%;
-    top: 50%;
+    top: 40%;
     bottom: 48.67%;
 
     font-family: Fira Sans;
@@ -238,11 +252,11 @@ header {
 
   }
 
-  #medals{
+#medals{
     position: absolute;
     left: 6.67%;
     right: 85.6%;
-    top: 65%;
+    top: 55%;
     bottom: 39.33%;
 
     font-family: Fira Sans;
@@ -263,7 +277,7 @@ header {
     position: absolute;
     left: 6.67%;
     right: 87.47%;
-    top: 80%;
+    top: 70%;
     bottom: 30%;
 
     font-family: Fira Sans;
@@ -293,4 +307,37 @@ a:hover{
    
   }
 
+#sportsCards{
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      /*grid-auto-rows: minmax(100px, 120px);*/
+      padding-left: 0px;
+      justify-content: center;
+      margin-left: 10px;
+      margin-right: 10px;
+ }
+
+ #sportsCards > li:nth-child(34) > button:nth-child(1) {
+  margin-bottom: 100px;
+ }
+ 
+
+#container-cards {
+    position: relative;
+    margin-top: 30px;
+   }
+   
+
+#sportIcon{
+  width: 80px;
+  height: 80px;
+  /*background-color: white;*/
   
+
+}   
+
+#Golf {
+  margin-bottom: 100px;
+ }
+ 

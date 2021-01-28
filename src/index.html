@@ -10,12 +10,13 @@
  <body>
    <div id="root"></div>
    <header>
-    <nav id="myLinks">
-     <div class="topnav" id="myTopnav">
-      <ul>
-        <li id="nav"> <a href="#athletes">Athletes</a></li>
-        <li id="nav2"> <a href="#medals">Results</a></li>
-        <li id="nav3"> <a href="#press">Press</a></li>
+    <nav>
+     <div class="topnav">
+    
+      <ul id="hamburger_menu">
+        <a href="#athletes"><li>Athletes</li></a>
+        <a href="#medals"><li>Results</li></a>
+        <a href="#press"><li>Press</li></a>
        
        </ul>
        <a href="#home" class="active"><img id="logo" src="resources/logosinfondo.png" alt="logo"></a>
@@ -27,10 +28,14 @@
         </nav>
    </header>
    <main>
+     <h4>OLYMPIC GAMES RESULTS:</h4>
      <div id="container-cards" class="wrapper">
        <ul id="sportsCards"></ul>
      </div>
-     <div id="eventList"></div>
+     <div>
+       <div></div>
+       <div id="eventList"></div>
+     </div>
    </main>
    <div #athletestoken></div>
    <aside></aside>
