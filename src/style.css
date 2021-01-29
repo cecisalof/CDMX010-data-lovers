@@ -108,7 +108,10 @@ header {
      font-family: Merriweather, Arial, Helvetica, sans-serif;
      font-size: 14px;
    }
+  #eventlist{
+    font-size: 12px;
 
+  } 
    a{
      font-family: Fira Sans, Arial, Helvetica, sans-serif;
      font-size: 12px;
@@ -339,5 +342,25 @@ a:hover{
 
 #Golf {
   margin-bottom: 100px;
+ }
+ 
+
+ /*Margen Frame 2 para banner e ícono*/
+ body > main:nth-child(3) > div:nth-child(3) > div:nth-child(2) {
+  display: block;
+  margin-top: 200px;
+ }
+ 
+/* Margenes para lista de eventos*/
+  body > main:nth-child(3) > div:nth-child(3) > div:nth-child(2) {
+  display: block;
+  padding-left: 25px;
+  padding-right: 15px;
+  line-height: 20px;
+  margin-bottom: 50px;
+ }
+ 
+ li.eventList:nth-child(306) {
+  margin-bottom: 150px;
  }
  

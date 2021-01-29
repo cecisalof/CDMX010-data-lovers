@@ -46,7 +46,7 @@ export function filterByEvent(athletes){
      //console.log(eventResult); // Hasta aqu{i arroja los eventos deportivos repetdos
     const eventArr = new Set(eventResult);
     let eventList = [...eventArr];
-    //console.log(eventList); // Ahora arroja un set único de eventso deportivos (306)
+    //console.log(eventList); // Ahora arroja un set único de eventos deportivos (306)
     
     return eventList;
    }
@@ -60,9 +60,8 @@ export function filterByEvent(athletes){
      const filteredAthletes = data.athletes.filter(function(athlete){ //filtrado por deporte
       return athlete.sport === sport
      });
-      const events = filteredAthletes.map(function(athlete){ // crear un nuevo array con los resultados de filtrar los eventos de cada deporte 
-    
-       return athlete.event
+     const events = filteredAthletes.map(function(athlete){ // crear un nuevo array con los resultados de filtrar los eventos de cada deporte 
+      return athlete.event
      })
     
      const eventsWithoutDuplicate = new Set(events) 
