@@ -2,6 +2,7 @@
 //Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener, 
 //procesar y manipular datos (tus funciones).
 
+import athletes from './data/athletes.js';
 import data from './data/athletes.js';
 
 
@@ -70,3 +71,45 @@ export function filterByEvent(athletes){
      getEventsBySport(data);
     //console.log("Filtering by Sport for Swimmig", getEventsBySport("Swimming"));
   
+
+
+   //FILTRAR MEDALLISTAS POR EVENTO DEPORTIVO
+  export function getMedalListByEvent(event){
+   const filteredData3 = data.athletes.filter(function(athlete){
+    return athlete.event === event
+   });
+   const medallist = filteredData3.map(function (athlete){
+      return athlete.name
+   })
+   const medallistByEvent = new Set(medallist)
+   return [...medallistByEvent]
+  }
+   getMedalListByEvent(data);
+  //console.log("Getting medallist by event for Tennis", getMedalListByEvent("Table Tennis Men's Team") );
+  //console.log("Getting medallist by event for Diving", getMedallistByEvent("Diving Women's Platform") );
+
+
+
+
+
+
+
+
+  //FILTRAR ATLETAS POR GÉNERO
+/*  export function getMedallistByGender(athlete){
+    const filteredData4 = data.athletes.filter(function(athlete){
+     return athlete.gender === gender
+    });
+ 
+    const medallist = filteredData3.map(function (athlete){
+       return athlete.name
+    })
+ 
+    const medallistByEvent = new Set(medallist)
+    return [...medallistByEvent]
+   }
+     getMedallistByEvent(data);
+
+*/
+
+ 
