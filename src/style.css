@@ -1,64 +1,105 @@
-/*RESPONSIVE RULES:*/
- 
- @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-/*FIGMA RULES FOR MOBILE:*/
+
+
+/*MOBILE RULES*/
+*{
+  box-sizing: border-box;
+}
+
+ body{
+ font-family: Merriweather, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: black;
+  margin: 0px;
+}
+
+ h1, h2, h3, h4, h5, h6{
+  font-family: Fira Sans, Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+h1{
+  font-size: 28px
+ } 
+ 
+ h2{
+  font-size: 26px
+ } 
+ 
+ h3{
+  font-size: 24px
+ } 
+ 
+ 
+ h4{
+  font-size: 20px
+ }
+ 
+ h5{
+  font-size: 18px
+ }
+ 
+ h6{
+  font-size: 16px
+ }
 
 #logo{
-  width: px;
-  height: 50px;
- 
-  position: absolute;
-  left: 69.33%;
-  right: 18.67%;
-  top: 11.11%;
-  bottom: 12.7%;
-  background: url(LOGOsinfondo.png);
+  margin-top: 8px;
+  display: flex;
+  width: 100px;
+  float: right;
+  margin-right: 30px;
 }
- 
+
+#btn{
+  width: 50px;
+  background-color: #FEF741;
+  border: none;
+  color: blue;
+  margin-top: 30px;
+  margin-left: 30px;
+
+}
+
+.enabled-menu{
+  display: block;
+}
+
+.disabled-menu{
+  display: none;
+}
 
 header {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 10%;
+  height: 91px;
   left: 0%;
   right: 0%;
   top: 0%;
   bottom: 0%;
-  background: #FFF500;
+  background: #FEF741;
+  
 }
-
-
-/*.topnav {
-  overflow: hidden;
-  background-color: transparent;
-  position: relative;
-}*/
-
-
-.topnav #myLinks {
-  display: none;
-}
-
-.hamburger_menu{
+ 
+ 
+#navBar{
   position: absolute;
-  left: 8%;
-  right: 85.26%;
-  top: 25.4%;
-  bottom: 26.98%;
-
+  left: 5%;
+  /*right: 80%;*/
+  top: 20%;
 }
-
-
-#filter_menu{
+ 
+ 
+#filter_menu{ /* Search ícon*/
   position: absolute;
   left: 85.33%;
   right: 8%;
   top: 31.75%;
   bottom: 31.46%;
-
-
+ 
+ 
   height: 23.181819915771484px;
   width: 25px;
   left: 85%;
@@ -66,361 +107,351 @@ header {
  
     } 
 
-    #reload {
-      margin-top: 150px;
-     }
-     
+#navBar{
+padding: 40px;
+list-style: none;
+position: relative;
+display: flex;
+float: right;
+margin-right: 100px;
+}
 
-  li{
-    list-style: none;
-  }
 
-  footer{
-    position: absolute;
-    width: 375px;
-    height: 100px;
-    left: 0px;
-    
-    /*top: 542px;*/
-  }
-
-#footer{
-    position: fixed;
-    width: 375px;
-    height: 100px;
-    bottom: 0px;
-  
-    background: #FFF500;
-  }
-
-  body > footer:nth-child(6) {
-    bottom: 0px;
-   }
-
-   body > main:nth-child(3) > h4:nth-child(1) {
-    margin-top: 100px;
-    padding-left: 10px;
-    font-size: 14px;
-   }
    
-   
+/*a:hover{
+color: #005EB8;
+}*/
 
-   p{
-     font-family: Merriweather, Arial, Helvetica, sans-serif;
-     font-size: 14px;
-   }
-  
-   #eventlist{
-    font-size: 12px;
-
-  } 
-
-   a{
-     font-family: Fira Sans, Arial, Helvetica, sans-serif;
-     font-size: 12px;
-
-   }
-
-   h1, h2, h3, h4, h5, h6{
-      font-family: Fira Sans, Arial, Helvetica, sans-serif;
-
-   }
-   
-   h1{
-    font-size: 28px
-   } 
-   
-   h2{
-    font-size: 26px
-   } 
-   
-   h3{
-    font-size: 24px
-   } 
-   
-   
-   h4{
-    font-size: 20px
-
-   }
-   
-   h5{
-    font-size: 18px
-
-   }
-   
-   h6{
-    font-size: 16px
-
-   }
-
-
-.footer_img{
-      height: 43.38461685180664px;
-      width: px;
-      left: 168px;
-      top: 53px;
-      border-radius: 0px;
-
-      position: absolute;
-      left: 44.8%;
-      right: 44.53%;
-      top: 35.33%;
-      bottom: 35.74%;
-      
-      background: url(LOGOsinfondo.png);
-    
-      filter: brightness(10%);
-    
-   }
-
-
-.contact{
-   
-    position: absolute;
-    left: 70.13%;
-    right: 0%;
-    top: 35%;
-    bottom: 58.67%;
-    
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    
-    color: #000000;
-    
-   }
-
-#facebook{
-    border-radius: 0px;
-    position: absolute;
-    width: 15px;
-    height: 16.99px;
-    left: 283px;
-    top: 59px;
-
-    background: url(facebook-letter-logo.png);
-  } 
-
-#instagram{
-    border-radius: 0px;
-    position: absolute;
-    width: 15px;
-    height: 15.38px;
-    left: 305px;
-    top: 60px;
-
-    background: url(instagram.png);
-
-  }
-  
-.footer_tittle{
-    position: absolute;
-    left: 6.67%;
-    right: 76.27%;
-    top: 15%;
-    bottom: 58%;
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 9px;
-    line-height: 11px;
-    width: 100%;
-
-/* identical to box height */
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-  }
-
-#athletes{
-    position: absolute;
-    left: 6.67%;
-    right: 84.27%;
-    top: 40%;
-    bottom: 48.67%;
-
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
-    line-height: 11px;
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-
-  }
-
-#medals{
-    position: absolute;
-    left: 6.67%;
-    right: 85.6%;
-    top: 55%;
-    bottom: 39.33%;
-
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
-    line-height: 11px;
-
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-
-  }
-
-  #press{
-    position: absolute;
-    left: 6.67%;
-    right: 87.47%;
-    top: 70%;
-    bottom: 30%;
-
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
-    line-height: 11px;
-
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-    
-
-  }
-
-
-a:visited, a:link, a:active{
-    text-decoration: none;
-    font-size: 9px;
-    color: #000000;
-  }
-  
-a:hover{
-    color: #999797;
-   
-  }
-
-#sportsCardsHTML{
-      display: grid;
-      grid-gap: 15px;
-      grid-template-columns: repeat(3, 1fr);
-      /*grid-auto-rows: minmax(100px, 120px);*/
-      padding-left: 0px;
-      justify-content: center;
-      margin-left: 10px;
-      margin-right: 10px;
- }
-
- #sportsCards > li:nth-child(34) > button:nth-child(1) {
-  margin-bottom: 100px;
- }
- 
-
-#container-cards {
-    position: relative;
-    margin-top: 30px;
-   }
-   
-
-#sportIcon{
-  width: 80px;
-  height: 80px;
-  /*background-color: white;*/
-  
-
-}   
-
- /*Margen Frame 2 para banner e ícono*/
- body > main:nth-child(3) > div:nth-child(3) > div:nth-child(1) {
-  display: block;
+#titleFrame1 {
   margin-top: 200px;
- 
- 
-/* Margenes para lista de eventos*/
- 
+  text-align: center;
+  padding-bottom: 50px;
+ }
+
+ #sportsCardsHTML {
+  list-style: none;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
+  justify-content: center;
+  padding-left: 0px;
+ }
+
+#SportCard {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: white;
+  cursor: pointer;
+}
+
+#buttonCard {
+  display: flex;
+  justify-content: center;
+}
+
+
+#eventsList {
   display: block;
-  padding-left: 25px;
-  padding-right: 15px;
-  line-height: 30px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  margin-left: 30px;
+  list-style: none;
+  line-height: 3em;
  }
  
- li.eventList:nth-child(306) {
+.eventButton{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFF;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  font-weight: 300;
+
+  text-align: center;
+  transition: all 0.2s;
+  scroll-behavior: smooth;
+ }
+
+.eventButton:hover{
+  color: #009739;
+  font-weight: bold;
+}
+
+table{
+  font-family: Merriweather, Arial, Helvetica, sans-serif;
+  text-align: left;
   margin-bottom: 150px;
  }
 
- /*STYLE RULES FOR ATHLETES TOKENS*/
+td{
+  border: 1px solid #999999;
+}
 
- table{
-  font-family: Merriweather, Arial, Helvetica, sans-serif;
-  text-align: left;
+tbody{
+text-align: center;
+background-color: #E2DDDD;
+}
+
+ #flag{
+  width: 15%; 
  }
- /*th { // cabecera de las columnas
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+
+
+ #medal{
+  width: 30%;
+ }
+
+
+ #medallistByEvent {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 30px;
+  margin-bottom: 80px;
+ }
+ 
+
+footer{
+width: 100%;
+height: 200px;
+background-color: #ffff00;
+position: relative;
+display: flex;
+}
+
+
+#navigation_map {
+  list-style: none;
+  width: 384px;
+  /*! text-decoration: none; */
+ }
+
+ .footer_img {
+  width: 120px;
+  margin-top: 25px;
+  filter: brightness(10%);
+  margin-left: 250px;
+ }
+ 
+ #footerLogo {
+  width: 384px;
+ }
+
+ #footerSocialMedia {
+  width: 384px;
+ }
+
+ #facebook {
+  width: 30px;
+  margin-left: 300px;
+ }
+
+ #instagram {
+  width: 30px;
+  /*! margin-left: 350px; */margin-top: 15px;
+ }
+ 
+ .contact {
+  margin-top: 68px;
+  margin-left: 80px;
+ }
+
+ 
+ 
+ a {
+  text-decoration: none;
+}
+
+
+#reload {
+  background-color: white;
+  border: none;
+  margin-top: 150px;
+  margin-left: 250px;
+   }
+ 
+   #reload > img:nth-child(1) {
+    width: 30px;
+   }
+   
+#sportIcon {
+    width: 120px;
+    height: 120px;
+    /*background-color: white;*/
+  }
+
+/* WIDTH 500 RULES------------------------------------------------*/
+@media screen and (min-width: 499px){
+  #sportsCardsHTML {
+    list-style: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px;
+    justify-content: center;
+    padding-left: 0px;
+   }
+   #medallistByEvent {
+    display: flex;
+    justify-content: center;
+    /*! width: 80%; */
+    margin: 30px;
+    margin-bottom: 80px;
+   }
+
+   footer {
+    width: 100%;
+    height: 200px;
+    background-color: #ffff00;
+    position: absolute;
+    display: flex;
+    margin: 0px;
+    }
+
+  .footer_img {
+    margin-left: 0px;
+    }
+
+  #facebook {
+  
+    margin-left: 0px;
+     }
+
+  .contact {
+     margin-left: 0px;
+    }
+
+   #navigation_map {
+    margin-top: 50px;
+     }
+
+
+}
+
+
+
+/*DESKTOP RULES--------------------------------------------------*/
+@media screen and (min-width: 800px){
+
+header{
+max-width: 100%;
+height: 200px;
+background-color: #FEF741;
+position: sticky;
+box-shadow: rgb(138, 135, 55, 0.5) 0px 0px 30px;
+}
+
+#hamburgerMenu{
+  display: none;
+}
+
+#opcs-menu{
+  display: block;
+}
+
+
+.nav {
+  padding: 15px;
+  font-size: 20px
+}
+.navTittle{
+  list-style: none;
+}
+
+.navTittle:hover {
+  color: blue;
+  
+}
+
+#navBar a {
+display: inline-block;
+text-decoration: none;
+color: black;
+}
+  
+#navBar a::before{
+width: 0%;
+content: "";
+height: 3px;
+display: block;
+background-color: blue;
+margin-bottom: 10px;
+}
+  
+#navBar a:hover::before{
+  width: 100%;
+  transition: all .5s;
+  
+   }
+
+#filter_menu {
+width: 50px;
+height: 50px;
+margin-top: 40px;
+margin-left: 20px;
+   }
+
+#headColumn2 {
+  /*! position: relative; */display: flex;
+ }
+
+ 
+#logo {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 4em;
+   
+ 
+}
+   
+/*a:visited, a:link, a:active{
+text-decoration: none;
+color: black
 }*/
 
-th {
-  font-family: Merriweather, Arial, Helvetica, sans-serif;
+#titleFrame1 {
+  margin-top: 150px; 
   text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #4CAF50;
-  color: white;
-}
- 
+  padding-bottom: 50px;
+ }
 
-#medallists {
- font-size: 16px;
- font-family: Merriweather, Arial, Helvetica, sans-serif;
- text-align: center;
- 
+ #sportsCardsHTML {
+  list-style: none;
+  margin-left: 50px;
+  margin-right: 50px;
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(50px, 50px);
+  grid-gap: 50px;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 100px;
+  justify-content: center;
   padding-left: 0px;
  }
- 
- #tableHeader {
-  display: grid;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(50px, 50px);
-  padding-left: 0px;
+
+ #eventsList {
+  margin-left: 100px;
+ }
+
+ #medallistByEvent {
+  margin: 100px;
+  margin-bottom: 150px;
+ }
+
+ #reload {
+  display: flex;
+  float: right;
+  margin-right: 100px;
+  background: white;
+  border: none;
+  margin-top: 50px;
  }
  
-
-
-td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  align-items: center;
-
 }
-
-
-
-/*REGLAS 02 DE FEBRERO*/
-  #team {
-    width: 30px;
-  }

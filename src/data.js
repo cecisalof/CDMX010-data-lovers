@@ -3,6 +3,7 @@
 //procesar y manipular datos (tus funciones).
 
 //import athletes from './data/athletes.js';
+import athletes from './data/athletes.js';
 import data from './data/athletes.js';
 
 
@@ -27,7 +28,7 @@ export function allSportsOnce(athletes){ //athletes como parámetros
  }
   //console.log(sports);//Hasta aquí imprime 2023 objetos "athletes"
   //orenar alfabéticamente
-  let orderAZ = data.athletes.sort(function(sport1, sport2){
+  let orderAZ =data.athletes.sort(function(sport1, sport2){
     if (sport1.sport > sport2.sport){
       return 1;
  }
@@ -55,15 +56,25 @@ export function filterByEvent(athletes){
      for (const i in data.athletes){
      eventResult.push(data.athletes[i].event)
      } 
-     //console.log(eventResult); // Hasta aquí arroja los eventos deportivos repetidos
-    const eventArr = new Set(eventResult);
+     //ordenar alfabéticamente
+     let orderAZ = data.athletes.sort(function(event1, event2){
+      if (event1.event > event2.event){
+        return 1;
+   }
+      if(event1.sport < event2.sport){
+      return -1;
+   }
+       return 0; 
+      })
+  console.log(eventResult); // Hasta aquí arroja los eventos deportivos repetidos
+   const eventArr = new Set(eventResult);
     let eventList = [...eventArr];
-   //console.log(eventList); // Ahora arroja un set único de eventos deportivos (306)
+   console.log(eventList); // Ahora arroja un set único de eventos deportivos (306)
     
     return eventList;
    }
    
-   filterByEvent(data);
+   //filterByEvent(data);
 
    
   
@@ -86,17 +97,19 @@ export function filterByEvent(athletes){
 
    //FILTRAR MEDALLISTAS POR EVENTO DEPORTIVO
   export function getMedallistByEvent(event) {
-   const filteredData = data.athletes.filter(function(athlete){ // se filtra por evento
+   return data.athletes.filter(function(athlete){ // se filtra por evento
     return athlete.event === event
-   });
-
-   const medallist = filteredData.map(function (athlete){ //aquí mapeamos sobre filterData y creamos un nuevo array sólo con la porpiedad athlete.name
-      return athlete.name
-   })
-
-   const medallistByEvent = new Set(medallist)// creamos un arraycon datos únicos
     
-   return [...medallistByEvent]
+   })
+    /*athletes.sort((a,b) => {
+      if ( a.medal < b.medal ) {
+        return -1;
+      }
+      if ( a.medal > b.medal ){
+        return 1;
+      }
+      return 0;
+    })*/
   }
 
   //  getMedallistByEvent(data.athletes);

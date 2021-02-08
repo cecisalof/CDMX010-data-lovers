@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <meta charset="utf-8">
+   <meta charset="utf-8" content="width=device-width, initial-scale=1 maximum-scale=1">
    <title>Data Lovers</title>
    <link rel="stylesheet" href="style.css" />
    <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -10,30 +10,39 @@
  <body>
    <div id="root"></div>
    <header>
-    <nav>
-     <div class="topnav">
-    
-      <ul id="hamburger_menu">
+     <div id="hamburgerMenu">
+        <button id="btn">
+          <hr>
+          <hr>
+          <hr>
+        </button>
+     </div>
+    <nav id="opcs-menu" class="disabled-menu">
+     <ul id="navBar">
         <!--<button><a href="#athletesToken"><li>Athletes</li></a></button>-->
-        <a href="#athletes"><li>Athletes</li></a>
-        <a href="#medals"><li>Results</li></a>
-        <a href="#press"><li>Press</li></a>
-       
-       </ul>
-       <a href="#home" class="active"><img id="logo" src="resources/logosinfondo.png" alt="logo"></a>
-       <div>
-         <img id="filter_menu" src="resources/header/search icon.png" alt="search">
-       </div>       
-     </div>  
+        <h2 class="nav"><li class="navTittle"><a href="#athletes">Athletes</a></li></h2>
+        <h2 class="nav"><li class="navTittle"><a href="#medals">Results</a></li></h2>
+        <h2 class="nav"><li class="navTittle"><a href="#press">Press</a></li></h2>
+        </ul>
+      
        <!-- <a href="javascript:void(0);" class="icon" onclick="mobileMenu()"> --><!--void: crea un clink que no enlaza a ningún lugar si no que ejecuta la función de javascript-->
-        </nav>
+    </nav>
+    <div id="headColumn2">
+      <a href="#home" class="active"><img id="logo" src="resources/logosinfondo.png" alt="logo"></a>
+      <!--<img id="filter_menu" src="resources/header/search icon.png" alt="search">-->
+    </div>
    </header>
    <main>
-     <button id="reload">Back</button>
-     <div></div>
-     <h4 id="titleFrame1">OLYMPIC GAMES RESULTS:</h4>
+    <div class="reload">
+      <button id="reload">
+        <img src="resources/reload.png" alt="reload">
+      </button>
+    </div>
+    <div>
+     <h4 id="titleFrame1">OLYMPIC GAMES RESULTS</h4>
      <div id="container-cards" class="wrapper">
        <ul id="sportsCardsHTML"></ul>
+     </div>
     </div>
     <div>
        <div id="eventsList"></div>
@@ -42,7 +51,7 @@
     <div>
       <div id="athletesToken"></div>
     </div>
-    <div>
+    <div id="allMedallists">
        <!--<table>
          <thead>
            <tr id="tableHeader">
@@ -51,20 +60,25 @@
               <th>Team</th>
           </tr>
          </thead> 
-     <tr id="medallists"></tr>
+     <tr id="medallistsTable"></tr>
     </table>-->
     </div>
    </main>
+   <!--PRUEBA MENÚ HAMBUERGUESA-->
    <aside></aside>
    <footer>
-     <div id="footer">
+   <div id="navigationMap">
       <ul id="navigation_map">
         <p class="footer_tittle">Navigation Map</p>
         <li id="athletes"> <a href="#athletes">Athletes</a></li>
         <li id="medals"> <a href="#medals">Results</a></li>
         <li id="press"> <a href="#press">Press</a></li>
        </ul>
+    </div>
+    <div id="footerLogo">
        <img class="footer_img" src="resources/logosinfondo.png" alt="logo">
+    </div>
+    <div id="footerSocialMedia">
        <p class="contact">support@rio2016.com</p>
        <a href="#facebook"><img id="facebook" src="resources/footer/facebook-letter-logo.png" alt=""></a>
        <a href="#instagram"><img id="instagram" src="resources/footer/instagram.png" alt=""></a>

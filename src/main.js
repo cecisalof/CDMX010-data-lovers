@@ -1,12 +1,7 @@
-//Para todo tu código que tenga que ver con mostrar los datos en la pantalla. 
-//Con esto nos referimos básicamente a la interacción con el DOM. 
-//Operaciones como creación de nodos, registro de manejadores de eventos (event listeners o event handlers), ....
-
 import data from './data/athletes.js';
 import {allSportsOnce, filterByEvent, filterBySport, getEventsBySport, getMedallistByEvent} from './data.js';
-import athletes from './data/athletes.js';
 //import athletes from './data/athletes.js';
-
+//import athletes from './data/athletes.js';
 
 
 let arrayAthletes = data.athletes;
@@ -16,9 +11,32 @@ let title = document.getElementById('titleFrame1');
 let buttons = document.getElementsByClassName('sportCardButton');
 let eventsList = document.getElementById('eventsList');
 //let tableHeader = document.getElementById("tableHeader");
-//let athletesToken = document.getElementById("athletesToken");
+let athletesToken = document.getElementById("athletesToken");
 let eventsButton = document.getElementsByClassName("eventButton");
 let reloadButton = document.getElementById("reload");
+let menuButton = document.getElementById("btn");
+
+
+
+
+//Hamburger Menu for mobile
+/*function showMenu(){
+   
+    let menu = document.getElementById("opcs-menu");
+    
+   if(menu.classList.contains("disabled-menu")){
+      menu.classList.remove("disabled-menu");
+      menu.classList.add("enabled-menu");
+    }
+    else {  
+      menu.classList.remove("enabled-menu");
+      menu.classList.add("disabled-menu");
+    }
+   }
+    
+   menuButton.addEventListener("click", showMenu);*/
+   
+
 
 // 1.- Crear tarjetas de deportes con template literals.
 function createSportCards(sport){
@@ -47,7 +65,7 @@ function setSportCard(){
 // 3.- Crear lista de eventos por deporte
 function createEventList(event) {
     let listItem =  `<li id="eventList" class="eventList">
-                        <button class="eventButton" data-event="${event}">${event}</button>
+                        <button class="eventButton" style="background: none" data-event="${event}">${event}</button>
                      </li>`;
       return listItem;
  }
@@ -65,12 +83,22 @@ function createEventList(event) {
         eventsButton[i].addEventListener("click", (event) => {
             const eventAthletes = event.currentTarget.dataset.event
             const athletes = getMedallistByEvent(eventAthletes) // arreglo de eventos 
-            console.log('medallist filtered by event', athletes)// imprime los medallistas del deporte que el usuario eligió
+            //console.log('medallist filtered by event', athletes)// imprime los medallistas del deporte que el usuario eligió
             SetMedalTable(athletes)
-            console.log("Selected event for medallist", eventAthletes);// Arroja la opción que el usuario elige para filtrar la data
+            athletes.sort((a, b) => {
+                if ( a.medal < b.medal ) {
+                  return -1;
+                }
+                if ( a.medal > b.medal ){
+                  return 1;
+                }
+                return 0;
+              })
+            //console.log("Selected event for medallist", eventAthletes);// Arroja la opción que el usuario elige para filtrar la data
         })
     }
   }
+  
 
 
 //8.- Crear Medallero 
@@ -81,7 +109,9 @@ function createMedalTable(athlete){
             <img id="medal"  src="./resources/medals/${athlete.medal}.png">
         </td>
         <td>${athlete.name}</td>
-        <td>${athlete.team}</td>
+        <td>
+        <img id="flag"  src="./resources/flags_png/${athlete.team}.png">
+        </td>
      </tr>`;
    
    return table;
@@ -91,7 +121,7 @@ function createMedalTable(athlete){
 function SetMedalTable(medallist){
     //let arrMedals = getMedalListByEvent();
     const container = document.getElementById("medallists");
-    let html= '<table>';
+    let html= '<table id="medallistByEvent">';
 
     medallist.forEach(athlete => html += createMedalTable(athlete));
     html += '</table>'
@@ -108,9 +138,9 @@ function SetMedalTable(medallist){
     setSportCard();
     
     eventsList.style.display = "none"; // ocultamos la lista de eventos
-   // athletesToken.style.display = "none"; // ocultar fichero de atletas
+    athletesToken.style.display = "none"; // ocultar fichero de atletas
    // tableHeader.style.display= "none"; //oculto header de la tabla de atletas. No está creado dinámicamente!
-
+    reloadButton.style.display="none"; 
    // EL loop de abajo hacer que al dar click en la tarjeta de deportes, filtra los eventos de dicho deporte
     for(let i = 0; i < buttons.length ; i++) {
         buttons[i].addEventListener('click', (event) => {
@@ -121,6 +151,7 @@ function SetMedalTable(medallist){
              sportsCard.style.display = "none"; // ocultamos tarjetas de deportes
              eventsList.style.display = "block"; // mostramos la lista de eventos
              title.style.display="none"; // ocultamos el título del FRAME 1
+             reloadButton.style.display= "block";            
              const events = getEventsBySport(sport)
              setEventList(events) // arreglo de eventos 
              //console.log(events);
@@ -167,14 +198,6 @@ function setAthleteCard() {
 
 //setAthleteCard(data);// MUESTRA LAS FICHAS DE ATLETAS EN EL DOM 
                     //si no le pasas el parámetro "data" la función no corre!
-
-
-
-
-
-
-
-
 
 
     /*fuction showAthletesToken() { //Mostrar el arreglo de fichas de athletas sin filtrar. Esto debe anclarse al menú de navegación "Athletes"
