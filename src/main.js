@@ -1,5 +1,5 @@
 import data from './data/athletes.js';
-import {allSportsOnce, filterByEvent, filterBySport, getEventsBySport, getMedallistByEvent} from './data.js';
+import {allSportsOnce, getEventsBySport, getMedallistByEvent} from './data.js';
 //import athletes from './data/athletes.js';
 //import athletes from './data/athletes.js';
 
@@ -14,7 +14,7 @@ let eventsList = document.getElementById('eventsList');
 let athletesToken = document.getElementById("athletesToken");
 let eventsButton = document.getElementsByClassName("eventButton");
 let reloadButton = document.getElementById("reload");
-let menuButton = document.getElementById("btn");
+//let menuButton = document.getElementById("btn");
 
 
 
@@ -168,7 +168,7 @@ reloadButton.addEventListener("click", () =>{
 
 
 
-// 6.- Crear fichas de atletas
+/* 6.- Crear fichas de atletas
 function createCard(athlete) {
     let card = `
         <div>
@@ -188,7 +188,7 @@ function createCard(athlete) {
     return card;
  }
 
-//7.-Imprimir ficha de atletas
+// 7.-Imprimir ficha de atletas
 function setAthleteCard() {
     let container = document.getElementById("athletesToken"); // Falta hacer commit: Cambió Token con mayúscula
     let html = '';

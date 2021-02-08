@@ -3,7 +3,6 @@
 //procesar y manipular datos (tus funciones).
 
 //import athletes from './data/athletes.js';
-import athletes from './data/athletes.js';
 import data from './data/athletes.js';
 
 
@@ -19,6 +18,7 @@ export function filterBySport(sport){
 
 
 //Filtrado de los 34 deportes del set de datos.
+// eslint-disable-next-line no-unused-vars
 export function allSportsOnce(athletes){ //athletes como parámetros
   let sports = []; // Un array vacío en el que se añadirán los elementos que resulten del método push.
   for(const i in data.athletes){ // un loop sobre todo el array de objetos "athletes" en "data" 
@@ -28,7 +28,8 @@ export function allSportsOnce(athletes){ //athletes como parámetros
  }
   //console.log(sports);//Hasta aquí imprime 2023 objetos "athletes"
   //orenar alfabéticamente
-  let orderAZ =data.athletes.sort(function(sport1, sport2){
+  // eslint-disable-next-line no-unused-vars
+  let orderAZ = data.athletes.sort(function(sport1, sport2){
     if (sport1.sport > sport2.sport){
       return 1;
  }
@@ -38,6 +39,7 @@ export function allSportsOnce(athletes){ //athletes como parámetros
      return 0; 
     })
     
+  // eslint-disable-next-line no-undef
   const sportsArr = new Set(sports); // Se crea una variable para asiganr un nuevo set de datos únicos
   let sportsList = [...sportsArr]; // spread operator aplicado al nuevo array "dataArrSports" 
 
@@ -51,12 +53,14 @@ allSportsOnce(data); //Si no pasamos "data" como argumento de la función, ésta
 
 
 //Filtra los evento deportivos en los que los medallistas compitieron
-export function filterByEvent(athletes){ 
+// eslint-disable-next-line no-unused-vars
+export function filterByEvent(athletes){ // athletes como parámetro
      let eventResult = [];
      for (const i in data.athletes){
      eventResult.push(data.athletes[i].event)
      } 
      //ordenar alfabéticamente
+     // eslint-disable-next-line no-unused-vars
      let orderAZ = data.athletes.sort(function(event1, event2){
       if (event1.event > event2.event){
         return 1;
@@ -66,16 +70,17 @@ export function filterByEvent(athletes){
    }
        return 0; 
       })
-  console.log(eventResult); // Hasta aquí arroja los eventos deportivos repetidos
-   const eventArr = new Set(eventResult);
+  //console.log(eventResult); // Hasta aquí arroja los eventos deportivos repetidos
+    // eslint-disable-next-line no-undef
+    const eventArr = new Set(eventResult);
     let eventList = [...eventArr];
-   console.log(eventList); // Ahora arroja un set único de eventos deportivos (306)
+  //console.log(eventList); // Ahora arroja un set único de eventos deportivos (306)
     
     return eventList;
    }
    
    //filterByEvent(data);
-
+  
    
   
    //OH CON RAÚL SOBRE MAPEAR LOS EVENTOS DE COMPETICIÓN POR DEPORTE
@@ -87,11 +92,12 @@ export function filterByEvent(athletes){
       return athlete.event
      })
     
+     // eslint-disable-next-line no-undef
      const eventsWithoutDuplicate = new Set(events) // crea un array con  datos únicos
      return [...eventsWithoutDuplicate]
    }
      getEventsBySport(data.athletes);
-    //console.log("Filtering Events by Sport for Swimmig", getEventsBySport("Swimming"));
+    //console.log("Filtering Events by Sport for Swimmig", getEventsBySport("Tennis"));
   
 
 
@@ -113,7 +119,7 @@ export function filterByEvent(athletes){
   }
 
   //  getMedallistByEvent(data.athletes);
- //console.log("Getting medallist by event for Tennis", getMedallistByEvent("Table Tennis Men's Team") );
+ //console.log("Getting medallist by event for Tennis", getMedallistByEvent("Tennis Women's Doubles") );
  //console.log("Getting medallist by event for Diving", getMedallistByEvent("Diving Women's Platform") );
 
 
