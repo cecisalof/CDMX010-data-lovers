@@ -40,8 +40,7 @@ export function allSportsOnce(athletes){ //athletes como parámetros
 //allSportsOnce(data); //Si no pasamos "data" como argumento de la función, ésta no correrá
 
 
-//orenar alfabéticamente con .sort
-  
+//orenar alfabéticamente con .sort------------------------------------------------------------------------------------------------
 export let orderAZ = data.athletes.sort(function(a, b){
     if (a > b){
       return 1;

@@ -60,6 +60,7 @@ h1{
   color: blue;
   margin-top: 30px;
   margin-left: 30px;
+  position: absolute;
 
 }
 
@@ -82,16 +83,22 @@ header {
   background: #FEF741;
   
 }
- 
+
+.nav {
+  font-size: 16px;
+}
  
 #navBar{
   position: absolute;
   left: 5%;
   right: 80%;
-  top: 20%;*/
-  padding: 40px;
+  top: 20%;
+  padding: 50px;
   list-style: none;
-
+  margin-top: 70px;
+  background-color: #ccc;
+  padding: 15px;  
+ 
 }
 
 .navTittle a {
@@ -99,7 +106,7 @@ header {
 }
 
 .navTittle a:hover {
-  color: gray;
+  color: white;
 }
  
 #filter_menu{ /* Search ícon*/
@@ -349,18 +356,43 @@ position: sticky;
 box-shadow: rgb(138, 135, 55, 0.5) 0px 0px 30px;
 }
 
+ 
+#headColumn2 {
+  /*! position: relative; */display: flex;
+ }
+
 #hamburgerMenu{
   display: none;
 }
+
+#navBar {
+ 
+ }
+ 
 
 #opcs-menu{
   display: block;
 }
 
-
+#navBar{
+  padding: 40px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  float: right;
+  margin-right: 100px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  margin-top: 0px;
+  background-color: transparent;
+  }
+   
+  
 .nav {
   padding: 15px;
   font-size: 20px
+ 
 }
 .navTittle{
   list-style: none;
