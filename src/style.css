@@ -87,10 +87,20 @@ header {
 #navBar{
   position: absolute;
   left: 5%;
-  /*right: 80%;*/
-  top: 20%;
+  right: 80%;
+  top: 20%;*/
+  padding: 40px;
+  list-style: none;
+
 }
- 
+
+.navTittle a {
+  color: blue;
+}
+
+.navTittle a:hover {
+  color: gray;
+}
  
 #filter_menu{ /* Search ícon*/
   position: absolute;
@@ -107,17 +117,6 @@ header {
  
     } 
 
-#navBar{
-padding: 40px;
-list-style: none;
-position: relative;
-display: flex;
-float: right;
-margin-right: 100px;
-}
-
-
-   
 /*a:hover{
 color: #005EB8;
 }*/

@@ -6,7 +6,7 @@
 import data from './data/athletes.js';
 
 
-//Esta función filtra del set los objetos "athlete" por su propiedad {sport}
+//Esta función filtra del set los objetos "athlete" por su propiedad {sport}------------------------------------------------
 export function filterBySport(sport){
     let filteredData = data.athletes.filter(function(athlete){
       return athlete.sport === sport
@@ -17,7 +17,8 @@ export function filterBySport(sport){
 //console.log("Filtering by Sport for Volleyball", filterBySport("Volleyball"));
 
 
-//Filtrado de los 34 deportes del set de datos.
+
+//Filtrado de los 34 deportes del set de datos----------------------------------------------------------------------------
 // eslint-disable-next-line no-unused-vars
 export function allSportsOnce(athletes){ //athletes como parámetros
   let sports = []; // Un array vacío en el que se añadirán los elementos que resulten del método push.
@@ -26,20 +27,9 @@ export function allSportsOnce(athletes){ //athletes como parámetros
                                         //añadirán al array. En este caso el lenght del array "sports" es 0, por lo que se crea 
                                           // con el loop que itera sobre data.athletes.sport y añade los elemntos a "sports"
  }
+
   //console.log(sports);//Hasta aquí imprime 2023 objetos "athletes"
-  //orenar alfabéticamente
-  // eslint-disable-next-line no-unused-vars
-  let orderAZ = data.athletes.sort(function(sport1, sport2){
-    if (sport1.sport > sport2.sport){
-      return 1;
- }
-    if(sport1.sport < sport2.sport){
-    return -1;
- }
-     return 0; 
-    })
-    
-  // eslint-disable-next-line no-undef
+  
   const sportsArr = new Set(sports); // Se crea una variable para asiganr un nuevo set de datos únicos
   let sportsList = [...sportsArr]; // spread operator aplicado al nuevo array "dataArrSports" 
 
@@ -47,29 +37,32 @@ export function allSportsOnce(athletes){ //athletes como parámetros
  return sportsList;
 }
 
-allSportsOnce(data); //Si no pasamos "data" como argumento de la función, ésta no correrá
+//allSportsOnce(data); //Si no pasamos "data" como argumento de la función, ésta no correrá
 
 
+//orenar alfabéticamente con .sort
+  
+export let orderAZ = data.athletes.sort(function(a, b){
+    if (a > b){
+      return 1;
+ }
+    if(a < b){
+    return -1;
+ }
+     return 0; 
+    })
 
 
-//Filtra los evento deportivos en los que los medallistas compitieron
+    
+//Filtra los evento deportivos en los que los medallistas compitieron-----------------------------------------------------
+
 // eslint-disable-next-line no-unused-vars
 export function filterByEvent(athletes){ // athletes como parámetro
      let eventResult = [];
      for (const i in data.athletes){
      eventResult.push(data.athletes[i].event)
      } 
-     //ordenar alfabéticamente
-     // eslint-disable-next-line no-unused-vars
-     let orderAZ = data.athletes.sort(function(event1, event2){
-      if (event1.event > event2.event){
-        return 1;
-   }
-      if(event1.sport < event2.sport){
-      return -1;
-   }
-       return 0; 
-      })
+
   //console.log(eventResult); // Hasta aquí arroja los eventos deportivos repetidos
     // eslint-disable-next-line no-undef
     const eventArr = new Set(eventResult);
@@ -83,7 +76,7 @@ export function filterByEvent(athletes){ // athletes como parámetro
   
    
   
-   //OH CON RAÚL SOBRE MAPEAR LOS EVENTOS DE COMPETICIÓN POR DEPORTE
+   //OH CON RAÚL SOBRE MAPEAR LOS EVENTOS DE COMPETICIÓN POR DEPORTE----------------------------------------------------------------------
    export function getEventsBySport(sport) {
      const filteredAthletes = data.athletes.filter(function(athlete){ //filtrado por deporte
       return athlete.sport === sport
@@ -101,13 +94,20 @@ export function filterByEvent(athletes){ // athletes como parámetro
   
 
 
-   //FILTRAR MEDALLISTAS POR EVENTO DEPORTIVO
+   //FILTRAR MEDALLISTAS POR EVENTO DEPORTIVO-----------------------------------------------------------------------------------------------
   export function getMedallistByEvent(event) {
    return data.athletes.filter(function(athlete){ // se filtra por evento
     return athlete.event === event
-    
    })
-    /*athletes.sort((a,b) => {
+
+  }
+
+  //  getMedallistByEvent(data.athletes);
+ //console.log("Getting medallist by event for Tennis", getMedallistByEvent("Tennis Women's Doubles") );
+ //console.log("Getting medallist by event for Diving", getMedallistByEvent("Diving Women's Platform") );
+
+
+  /*athletes.sort((a,b) => {
       if ( a.medal < b.medal ) {
         return -1;
       }
@@ -116,33 +116,8 @@ export function filterByEvent(athletes){ // athletes como parámetro
       }
       return 0;
     })*/
-  }
-
-  //  getMedallistByEvent(data.athletes);
- //console.log("Getting medallist by event for Tennis", getMedallistByEvent("Tennis Women's Doubles") );
- //console.log("Getting medallist by event for Diving", getMedallistByEvent("Diving Women's Platform") );
 
 
 
-
-
-
-
-  //FILTRAR ATLETAS POR GÉNERO
-/*  export function getMedallistByGender(athlete){
-    const filteredData4 = data.athletes.filter(function(athlete){
-     return athlete.gender === gender
-    });
- 
-    const medallist = filteredData3.map(function (athlete){
-       return athlete.name
-    })
- 
-    const medallistByEvent = new Set(medallist)
-    return [...medallistByEvent]
-   }
-     getMedallistByEvent(data);
-
-*/
 
  

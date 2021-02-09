@@ -1,7 +1,7 @@
 import data from './data/athletes.js';
 import {allSportsOnce, getEventsBySport, getMedallistByEvent} from './data.js';
-//import athletes from './data/athletes.js';
-//import athletes from './data/athletes.js';
+
+
 
 
 let arrayAthletes = data.athletes;
@@ -14,13 +14,13 @@ let eventsList = document.getElementById('eventsList');
 let athletesToken = document.getElementById("athletesToken");
 let eventsButton = document.getElementsByClassName("eventButton");
 let reloadButton = document.getElementById("reload");
-//let menuButton = document.getElementById("btn");
+let menuButton = document.getElementById("btn");
 
 
 
 
 //Hamburger Menu for mobile
-/*function showMenu(){
+function showMenu(){
    
     let menu = document.getElementById("opcs-menu");
     
@@ -34,7 +34,7 @@ let reloadButton = document.getElementById("reload");
     }
    }
     
-   menuButton.addEventListener("click", showMenu);*/
+   menuButton.addEventListener("click", showMenu);
    
 
 
